@@ -1,11 +1,12 @@
 import React from "react";
 
+const year = new Date().getFullYear()
 
 const Footer = () => {
     return(
         <>
             <footer className="footer">
-                <h3>My Footer</h3>
+                <h6>{year} © React Redux</h6>
             </footer>
         </>
     )
