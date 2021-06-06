@@ -3,19 +3,24 @@ import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import "./StoreItem.css";
 
+import { useSelector, useDispatch } from "react-redux";
+
+import { addToCart,
+         removeFromCart,
+        selectCart,
+         } from "../features/cart/cartSlice";
+
+
+
+
 const StoreItem = ({ product }) => {
 
-    // const btnStyle = {
-    //     backgroundColor: 'black',
-    //     color: 'white',
-    //     borderRadius: '0%',
-    //     fontSize: '8px',
-    //     padding: '5px 10px',
-    //     border: 'none'
-    // }
+    const count = useSelector(selectCart);
+    const dispatch = useDispatch();
 
-    const handleClick = () => {
-        console.log('click add to cart');
+    const handleClick = (e) => {
+        console.log('click add to cart: ', product);
+        dispatch(addToCart(product));
     }
 
     return(
