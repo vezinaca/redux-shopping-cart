@@ -1,4 +1,38 @@
 .my-card {
-    background-color: purple;
-    color: red;
+    margin: 0 10px 10px;
 }
+
+.my-card p {
+   color: rgb(129, 120, 120); 
+   font-size: 14px;
+}
+
+.btn-myAdd {
+    background-color: black;
+    color: white;
+    border-radius: 0%;
+    font-size: 8px;
+    padding: 5px 10px;
+    border: none;
+    margin: 5px;
+}
+
+
+
+.btn-myDetails
+{
+    background-color: lightgrey;
+    color: black;
+    border-radius: 0%;
+    font-size: 8px;
+    padding: 5px 10px;
+    border: none;
+    margin: 5px;
+}
+
+.les-boutons {
+    display: flex-end;
+    justify-content: space-around;
+}
+
+

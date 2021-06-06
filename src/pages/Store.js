@@ -15,7 +15,7 @@ const Store = () => {
     return (
         <>
             <h2>Store</h2>
-            <p>10 Products</p>
+            <p className="text-left">10 Products</p>
             <div className="storeGrid">
                 <Row >
                     {allStoreItems}
