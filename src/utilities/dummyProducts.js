@@ -59,5 +59,11 @@ export const dummyProducts = [
       price: "123.82",
       photo: "/img/10.jpg"
     },
+    {
+        id: 11,
+        name: "Bag",
+        price: "1.23",
+        photo: "/img/10.jpg"
+      },
   ];
   

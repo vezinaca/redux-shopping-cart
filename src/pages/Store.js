@@ -16,7 +16,7 @@ const Store = () => {
         <>
             <h2>Store</h2>
             <h5>This is the store page.</h5>
-            <p className="text-left">10 Products</p>
+            <p className="text-left">{products.length} Products</p>
             <div className="storeGrid">
                 <Row >
                     {allStoreItems}

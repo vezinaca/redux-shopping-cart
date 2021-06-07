@@ -10,20 +10,22 @@ import { addToCart,
         selectCart,
          } from "../features/cart/cartSlice";
 
-
-
-
 const StoreItem = ({ product }) => {
-
-    const count = useSelector(selectCart);
+    
+    const cart = useSelector(selectCart);
     const dispatch = useDispatch();
 
+    // cart.cartItems.forEach(cartItem => {
+    //    console.log('cartItem dans StoreItem: ', cartItem); 
+    // })
+
     const handleClick = (e) => {
-        console.log('click add to cart: ', product);
+        //console.log('click add to cart: ', product);
+        //console.log('cart dans StoreItem: ', cart);
         dispatch(addToCart(product));
     }
 
-    return(
+    return (
         <>
             <Card className="my-card">
                 <Card.Body>

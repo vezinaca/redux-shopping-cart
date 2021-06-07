@@ -11,11 +11,13 @@ export const cartSlice = createSlice({
     initialState,
 
     reducers: {
-        addToCart: (state) => {
-            //state.cartItems.push('produit');
-            console.log('dansCartSlice add');
+        addToCart: (state, action) => {
+            state.cartItems.push({...action.payload});
+            //console.log('dansCartSlice add');
+            //console.log(current(state));
+            //console.log("state.cartItems dans cartSlice: ", state.cartItems);
         },
-        removeFromCart: (state) => {
+        removeFromCart: (state, action) => {
             state.checkout = true;
         }
     }
@@ -23,6 +25,10 @@ export const cartSlice = createSlice({
 
 export const { addToCart, removeFromCart} = cartSlice.actions;
 
-export const selectCart = state => state.cartItems;
+//export const selectCart = (state) => state.cart.cartItems;
+export const selectCart = state => state.cart.cartItems;
+
+//export const selectCount = (state) => state.counter.value;
+
 
 export default cartSlice.reducer;
