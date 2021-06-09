@@ -6,7 +6,7 @@ import "./StoreItem.css";
 import { useSelector, useDispatch } from "react-redux";
 
 import { addToCart,
-         removeFromCart,
+         addMoreToCart,
         selectCart,
          } from "../features/cart/cartSlice";
 
@@ -15,14 +15,19 @@ const StoreItem = ({ product }) => {
     const cart = useSelector(selectCart);
     const dispatch = useDispatch();
 
-    // cart.cartItems.forEach(cartItem => {
-    //    console.log('cartItem dans StoreItem: ', cartItem); 
-    // })
+    const handleAdd = (e) => {
+        
 
-    const handleClick = (e) => {
-        //console.log('click add to cart: ', product);
-        //console.log('cart dans StoreItem: ', cart);
-        dispatch(addToCart(product));
+        
+
+        if (cart.findIndex(item => item.id === product.id) === 0){
+            dispatch(addMoreToCart(product))
+            console.log('addmore');
+
+        } else{
+            dispatch(addToCart(product));
+            console.log('simple add');
+        } 
     }
 
     return (
@@ -34,7 +39,7 @@ const StoreItem = ({ product }) => {
                     <h5 className="text-left">${product.price}</h5>
                     <div className="text-right les-boutons">
                         <button className="btn-myDetails">DETAILS</button>
-                        <button className="btn-myAdd" onClick={handleClick}>ADD TO CART</button>
+                        <button className="btn-myAdd" onClick={handleAdd}>ADD TO CART</button>
                         {/* <Button style={btnStyle} size='sm'>ADD TO CART</Button> */}
                     </div>
                     

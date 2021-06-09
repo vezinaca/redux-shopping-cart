@@ -20,8 +20,8 @@ const CartItem = ({product}) => {
                     <h5>{product.name}</h5>
                     <p>Price: ${product.price}</p>
                 </div>
-                <div classname="quantity">
-                    <p>Qty: 1</p>
+                <div className="quantity">
+                    <p>Qty: {product.quantity}</p>
                 </div>
                 <div className="twoButtons">
                     <button onClick={add} className="btn-add"><PlusCircleIcon width={"20px"}/></button>

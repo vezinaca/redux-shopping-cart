@@ -25,7 +25,7 @@ const Cart = () => {
                 <div className="cartContent">
                     {allItemsCart}
                 </div>
-                <div className="checkoutContent">
+                <div className="checkout">
                     <Checkout />
                 </div>
             </div>

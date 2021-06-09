@@ -10,9 +10,7 @@
     grid-column: 1 / 9;
 }
 
-.checkoutContent {
+.checkout {
     grid-column: 10 / 12;
-    border: 2px solid grey;
-    padding: 30px;
-    text-align: left;
+    
 }
