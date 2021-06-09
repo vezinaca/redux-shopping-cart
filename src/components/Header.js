@@ -10,7 +10,7 @@ import { selectCart } from "../features/cart/cartSlice";
     const cart = useSelector(selectCart);
 
     return (
-        <div>
+        <div className="header">
             <nav className="nav">
                 <ul className="ul">
                     <Link to="/store"><li>Store</li></Link>

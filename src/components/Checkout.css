@@ -1,0 +1,32 @@
+.checkout {
+    min-width: 300px;
+}
+
+p {
+    color: rgb(138, 135, 135);    
+}
+
+.buttonsDiv {
+    border-top: 2px solid rgb(138, 135, 135);
+    padding-top: 30px;
+
+}
+
+.btn-checkout {
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 12px;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.btn-clear {
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: rgb(102, 100, 100);
+
+}
+

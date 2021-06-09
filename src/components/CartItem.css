@@ -1,0 +1,50 @@
+.cartItem {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    }
+
+.productInfo {
+    text-align: left;
+    
+}
+
+.twoButtons {
+    margin-left : auto;
+}
+
+button {
+    color: red;
+}
+
+.btn-add {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+.btn-remove {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+  
+  }
+
+p {
+    color: rgb(138, 135, 135);
+}
+
