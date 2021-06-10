@@ -20,14 +20,7 @@ export const cartSlice = createSlice({
             state.cartItems[state.cartItems.findIndex(item => item.id === action.payload.id)].quantity++
         },
         removeFromCart: (state, action) => {
-            console.log('dans slice remove from cart');
-            const items = ['a', 'b', 'c', 'd', 'e', 'f'];
-            const valueToRemove = 'c';
-            const filteredItems = items.filter(item => item !== valueToRemove);
-            console.log('filteredItems : ', filteredItems);
-            // ["a", "b", "d", "e", "f"]
-
-            
+                      
             state.cartItems = state.cartItems.filter(item => item.id !== action.payload.id)
         },
         decreaseFromCart: (state, action) => {            

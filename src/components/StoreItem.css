@@ -13,8 +13,17 @@
     border-radius: 0%;
     font-size: 8px;
     padding: 5px 10px;
-    border: none;
+    border: 0.2px solid black;
     margin: 5px;
+    transition: 0.2s;
+    /* width: 74px; */
+    width: 50%;
+}
+
+.btn-my-add:hover {
+    background-color: lightgrey;
+    color: black;
+
 }
 
 .btn-add-more {
@@ -23,8 +32,18 @@
     border-radius: 0%;
     font-size: 8px;
     padding: 5px 10px;
-    border: 2px solid black;
+    border: 0.2px solid black;
     margin: 5px;
+    transition: 0.2s;
+    /* width: 74px; */
+    width: 50%;
+}
+
+.btn-add-more:hover {
+    background-color: black;
+    color: white;
+    
+    
 }
 
 .btn-myDetails
@@ -34,7 +53,7 @@
     border-radius: 0%;
     font-size: 8px;
     padding: 5px 10px;
-    border: none;
+    border: 0.2px solid lightgrey;
     margin: 5px;
 }
 
