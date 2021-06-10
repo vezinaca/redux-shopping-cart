@@ -12,6 +12,11 @@ const Cart = () => {
 
     const cart = useSelector(selectCart);
     const disptach = useDispatch();
+
+    let itemCount = cart.reduce((total, product) => total + product.quantity, 0);
+    let total = cart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+    
+    
    
     const allItemsCart = cart?.map(product => (
         <CartItem key={product.id} product={product} />
@@ -26,7 +31,7 @@ const Cart = () => {
                     {allItemsCart}
                 </div>
                 <div className="checkout">
-                    <Checkout />
+                    <Checkout itemCount={itemCount} total={total} />
                 </div>
             </div>
         </>

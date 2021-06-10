@@ -14,19 +14,17 @@ const StoreItem = ({ product }) => {
     
     const cart = useSelector(selectCart);
     const dispatch = useDispatch();
+    const isInCart = cart.findIndex(item => item.id === product.id) !== -1
+    
+    const handleAdd = (e) => {        
 
-    const handleAdd = (e) => {
-        
-
-        
-
-        if (cart.findIndex(item => item.id === product.id) === 0){
+        if (isInCart){
             dispatch(addMoreToCart(product))
-            console.log('addmore');
+            
 
         } else{
             dispatch(addToCart(product));
-            console.log('simple add');
+            
         } 
     }
 
@@ -39,8 +37,7 @@ const StoreItem = ({ product }) => {
                     <h5 className="text-left">${product.price}</h5>
                     <div className="text-right les-boutons">
                         <button className="btn-myDetails">DETAILS</button>
-                        <button className="btn-myAdd" onClick={handleAdd}>ADD TO CART</button>
-                        {/* <Button style={btnStyle} size='sm'>ADD TO CART</Button> */}
+                        <button className={!isInCart ? 'btn-my-add' : 'btn-add-more'} onClick={handleAdd}>{!isInCart ? 'ADD TO CART' : 'ADD MORE' }</button>
                     </div>
                     
                 </Card.Body>

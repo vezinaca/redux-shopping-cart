@@ -16,16 +16,28 @@ export const cartSlice = createSlice({
             
         },
         addMoreToCart: (state, action) => {
-            console.log('addmore to cart');
+            console.log('addmore to cart slice');
             state.cartItems[state.cartItems.findIndex(item => item.id === action.payload.id)].quantity++
         },
         removeFromCart: (state, action) => {
-            state.checkout = true;
+            console.log('dans slice remove from cart');
+            const items = ['a', 'b', 'c', 'd', 'e', 'f'];
+            const valueToRemove = 'c';
+            const filteredItems = items.filter(item => item !== valueToRemove);
+            console.log('filteredItems : ', filteredItems);
+            // ["a", "b", "d", "e", "f"]
+
+            
+            state.cartItems = state.cartItems.filter(item => item.id !== action.payload.id)
+        },
+        decreaseFromCart: (state, action) => {            
+            state.cartItems[state.cartItems.findIndex(item => item.id === action.payload.id)].quantity--
         }
+
     }
 });
 
-export const { addToCart, removeFromCart, addMoreToCart} = cartSlice.actions;
+export const { addToCart, removeFromCart, addMoreToCart, decreaseFromCart } = cartSlice.actions;
 
 //export const selectCart = (state) => state.cart.cartItems;
 export const selectCart = state => state.cart.cartItems;
