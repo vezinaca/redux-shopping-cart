@@ -35,8 +35,6 @@ const CartItem = ({product}) => {
         }
     }
 
-    
-
     return (
         <>
             <div className="cartItem">

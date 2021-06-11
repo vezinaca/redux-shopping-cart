@@ -31,7 +31,7 @@ const Cart = () => {
                     {allItemsCart}
                 </div>
                 <div className="checkout">
-                    <Checkout itemCount={itemCount} total={total} />
+                    <Checkout />
                 </div>
             </div>
         </>

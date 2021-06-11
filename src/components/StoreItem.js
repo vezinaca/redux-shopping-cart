@@ -2,6 +2,7 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import "./StoreItem.css";
+import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -28,6 +29,10 @@ const StoreItem = ({ product }) => {
         } 
     }
 
+    const handleDetails = () => {
+        console.log('click details');
+    }
+
     return (
         <>
             <Card className="my-card">
@@ -36,7 +41,7 @@ const StoreItem = ({ product }) => {
                     <p className="text-left">{product.name}</p>
                     <h5 className="text-left">${product.price}</h5>
                     <div className="text-right les-boutons">
-                        <button className="btn-myDetails">DETAILS</button>
+                        <button className="btn-myDetails" onClick={handleDetails}><Link to={`/store/${product.id}`}> DETAILS</Link></button>
                         <button className={!isInCart ? 'btn-my-add' : 'btn-add-more'} onClick={handleAdd}>{!isInCart ? 'ADD TO CART' : 'ADD MORE' }</button>
                     </div>
                     

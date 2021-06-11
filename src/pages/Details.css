@@ -1,0 +1,15 @@
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    margin: 30px auto 30px;
+    border: 2px solid rgb(189, 186, 186);
+    /* margin-bottom: 30px;
+    margin-top: 30px; */
+    width: 600px;
+    padding: 30px;
+}
+
+.productInfo {
+    text-align: right;
+}
