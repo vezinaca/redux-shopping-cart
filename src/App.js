@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import Details from "./pages/Details";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route path="/store/:id" component={Details}></Route>
               <Route path="/about" component={About}></Route>
               <Route path="/cart" component={Cart}></Route>
+              <Route path="/checkout" component={Checkout}></Route>
           </Switch>
           <Footer />
           </div>

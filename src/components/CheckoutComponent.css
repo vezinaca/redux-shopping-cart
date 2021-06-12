@@ -32,6 +32,11 @@ p {
     transition: 0.2s;
 }
 
+.btn-checkout a {
+    color: white;
+    
+}
+
 .btn-checkout:hover {
     background-color: rgb(77, 74, 74);
     

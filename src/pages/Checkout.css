@@ -1,0 +1,89 @@
+.checkout-page-container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid darkgrey;
+    /* background-color: rgb(247, 243, 243); */
+    padding: 50px;
+    border-radius: 10px;
+    column-gap: 10px;    
+}
+
+h5 {
+    text-align: left;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 0.85rem;
+    /* display: flex; */
+    text-align: left;
+    /* margin-top: 10px; */
+   
+  }
+
+.radio {
+    display: flex;
+    
+}
+
+.paypal {
+    margin-top: 3px;
+}
+
+.credit {
+    margin-top: 3px;
+}
+
+.radio label {
+    margin-left: 15px;
+}
+
+form {
+    display: grid;
+    width: 400px;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.info-box {
+    background-color: rgb(213, 221, 230);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.img-paypal {
+    background-color: darkgrey;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="number"] {
+  padding: 0.65rem 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid darkgrey;
+}
+
+.credit-info {
+    display: flex;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.credit-info input {
+    width: 160px;
+}
+
+p {
+    font-size: 0.85rem;
+    text-align: left;
+    margin-top: 15rem;
+    
+}

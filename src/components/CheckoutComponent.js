@@ -1,9 +1,11 @@
 import React from "react";
-import "./Checkout.css";
+import "./CheckoutComponent.css";
 import { useSelector } from "react-redux";
 import { selectCartInfo } from "../features/cart/cartSlice";
+import { Link } from "react-router-dom";
+import Checkout from "../pages/Checkout";
 
-const Checkout = () => {
+const CheckoutComponent = () => {
 
     const cartInfo = useSelector(selectCartInfo);
 
@@ -15,7 +17,7 @@ const Checkout = () => {
                     <p>Total Payment</p>
                     <h5>${cartInfo.total}</h5>
                     <div className="buttonsDiv">
-                        <button className="btn-checkout">Checkout</button>
+                        <Link to="./checkout"><button className="btn-checkout">checkout</button></Link>
                         <button className="btn-clear">Clear</button>
                     </div>
                 </div>
@@ -24,4 +26,4 @@ const Checkout = () => {
     )
 }
 
-export default Checkout;
+export default CheckoutComponent;
