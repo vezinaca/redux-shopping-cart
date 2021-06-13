@@ -20,6 +20,7 @@ label {
     /* display: flex; */
     text-align: left;
     /* margin-top: 10px; */
+    margin-bottom: 5px;
    
   }
 
@@ -65,10 +66,11 @@ form {
 input[type="email"],
 input[type="text"],
 input[type="number"] {
-  padding: 0.65rem 0.5rem;
+  padding: 0.1rem 0.2rem;
   font-size: 1rem;
   background-color: white;
   border: 1px solid darkgrey;
+  margin-bottom: 10px;
 }
 
 .credit-info {
