@@ -89,3 +89,19 @@ p {
     margin-top: 15rem;
     
 }
+
+.error  {
+    color: red;
+    font-size: 0.75rem;
+}
+
+.credit-info-error {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* display: flex;  */
+    /* text-align: left; */
+}
+
+.ccv{
+    margin-left: 12px;
+}

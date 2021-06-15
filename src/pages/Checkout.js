@@ -15,23 +15,27 @@ const Checkout = () => {
         validationSchema: Yup.object({
             firstName: Yup.string()
             .max(15, 'Must be 15 characters or less')
-            .required('Required'),
+            .required('First name required'),
             lastName: Yup.string()
             .max(20, 'Must be 20 characters or less')
-            .required('Required'),
-            email: Yup.string().email('Invalid email address').required('Required'),
+            .required('Last name required'),
+            email: Yup.string().email('Invalid email address').required('Valid email address required'),
             cardNumber: Yup.string()
-             .max(16, 'Must be 16 characters or less')
-              .required('Required'),
+             .max(16, 'Must be 16 numbers')
+             .matches( /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/, 'Must be 16 characters' )
+              .required('Must be 16 numbers'),
             expiryDate: Yup.string()
             //   .max(4, 'Must be 4 characters or less')
             //   .required('Required'),
             .typeError('Not a valid expiration date. Example: MM/YY')
-            .max(5, 'Not a valid expiration date. Example: MM/YY')
+            .max(5, 'Carl MM/YY')
             .matches( /([0-9]{2})\/([0-9]{2})/,
-            'Not a valid expiration date. Example: MM/YY')
-            .required('Required'),
-            ccv: Yup.string().max('Must be 3 characters or less').required('Required'),
+            'MM/YY')
+            .required('ccv required'),
+            ccv: Yup.string()
+            .max(3, 'Must be 3 numbers')
+            .matches (/^[0-9]{3, 4}$/, 'not valid ccv')
+            .required('3 numbers required'),
           }),
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
@@ -68,7 +72,7 @@ const Checkout = () => {
                             value={formik.values.firstName}
                         />
                         {formik.touched.firstName && formik.errors.firstName ? (
-                            <div>{formik.errors.firstName}</div>
+                            <p className='error'>{formik.errors.firstName}</p>
                             ) : null}
                         <label htmlFor="lastName">Last Name</label>
                         <input
@@ -80,7 +84,7 @@ const Checkout = () => {
                             value={formik.values.lastName}
                         />
                         {formik.touched.lastName && formik.errors.lastName ? (
-                            <div>{formik.errors.lastName}</div>
+                            <p className='error'>{formik.errors.lastName}</p>
                             ) : null}
                         <label htmlFor="email">Email Address</label>
                         <input
@@ -92,7 +96,7 @@ const Checkout = () => {
                             value={formik.values.email}
                         />
                         {formik.touched.email && formik.errors.email ? (
-                            <div>{formik.errors.email}</div>
+                            <p className='error'>{formik.errors.email}</p>
                             ) : null}
                         <button className="btn-submit" type="submit">Submit</button>
                     </form>
@@ -118,6 +122,9 @@ const Checkout = () => {
                             onBlur={formik.handleBlur}
                             value={formik.values.cardNumber}                            
                         />
+                        {formik.touched.cardNumber && formik.errors.cardNumber ? (
+                            <p className='error'>{formik.errors.cardNumber}</p>
+                            ) : null}
                         <div className='credit-info'>
                             <div className='label-input'>
                                 <label htmlFor="expiryDate">Expiry date</label>
@@ -131,9 +138,7 @@ const Checkout = () => {
                                     placeholder='01/01'
                                 />
                             </div>
-                            {formik.touched.expiryDate && formik.errors.expiryDate ? (
-                            <div>{formik.errors.expiryDate}</div>
-                            ) : null}
+                            
                             <div className='label-input'>
                                 <label htmlFor="ccv">cvc/ccv</label>
                                 <input
@@ -144,10 +149,24 @@ const Checkout = () => {
                                     value={formik.values.ccv}
                                     placeholder='123'
                                 />
-                            </div>
+                            </div>                     
+                            
+                        </div>
+                        <div className='credit-info-error'>
+                            
+                                {formik.touched.expiryDate && formik.errors.expiryDate ? (
+                                    <p className='error'>{formik.errors.expiryDate}</p>
+                                    ) : null}
+                            
+                            
+                                {formik.touched.ccv && formik.errors.ccv ? (
+                                    <p className='error ccv'>{formik.errors.ccv}</p>
+                                    ) : null}
+                            
                         </div>
                         <button className="btn-submit" type="submit">Submit</button>                       
                         <p>Your transaction is secured with ssl encryption</p>
+                        
                     </form>
                 </div>
                 
