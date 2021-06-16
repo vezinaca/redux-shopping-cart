@@ -1,8 +1,7 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import Card from "react-bootstrap/Card";
 import "./StoreItem.css";
 import { Link } from "react-router-dom";
+import { formatNumber } from "../utilities/utils";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -20,8 +19,7 @@ const StoreItem = ({ product }) => {
     const handleAdd = (e) => {        
 
         if (isInCart){
-            dispatch(addMoreToCart(product))
-            
+            dispatch(addMoreToCart(product))            
 
         } else{
             dispatch(addToCart(product));
@@ -32,21 +30,23 @@ const StoreItem = ({ product }) => {
     const handleDetails = () => {
         console.log('click details');
     }
-
+      
     return (
-        <>
-            <Card className="my-card">
-                <Card.Body>
-                    <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" src={product.photo} alt="problem" />
-                    <p className="text-left">{product.name}</p>
-                    <h5 className="text-left">${product.price}</h5>
-                    <div className="text-right les-boutons">
+        <>           
+            <div className="card">
+                <div className="card--body">
+                    <img className="card--img" src={product.photo} alt="problem" />
+                    <div className="card--info">
+                        <p >{product.name}</p>
+                        <h2>{formatNumber(product.price)}</h2>
+                    </div>
+                    <div className="les-boutons">
                         <button className="btn-myDetails" onClick={handleDetails}><Link to={`/store/${product.id}`}> DETAILS</Link></button>
                         <button className={!isInCart ? 'btn-my-add' : 'btn-add-more'} onClick={handleAdd}>{!isInCart ? 'ADD TO CART' : 'ADD MORE' }</button>
                     </div>
                     
-                </Card.Body>
-            </Card>
+                </div>
+            </div>
         </>
     )
 }

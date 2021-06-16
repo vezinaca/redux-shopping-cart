@@ -9,7 +9,7 @@
     column-gap: 10px;    
 }
 
-h5 {
+.title {
     text-align: left;
     padding-bottom: 25px;
     margin-bottom: 25px;
@@ -83,7 +83,7 @@ input[type="number"] {
     width: 160px;
 }
 
-p {
+.error {
     font-size: 0.85rem;
     text-align: left;
     margin-top: 15rem;

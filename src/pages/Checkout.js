@@ -60,7 +60,7 @@ const Checkout = () => {
             <h4>This is checkout page</h4>
             <div className="checkout-page-container">
             <div className="summary info-box">
-                    <h5>Information</h5>
+                    <h5 className="title">Information</h5>
                     <form onSubmit={formik.handleSubmit}>
                         <label htmlFor="firstName">First Name</label>
                         <input
@@ -102,7 +102,7 @@ const Checkout = () => {
                     </form>
                 </div>
                 <div className="payment-method info-box">
-                    <h5>Payment Method</h5>
+                    <h5 className="title">Payment Method</h5>
                     <form className="form" onSubmit={formik.handleSubmit}>
                         <div className='radio'>
                             <input type='radio' className="paypal" name="paymentType" value="paypal"></input>
