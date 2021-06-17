@@ -1,18 +1,31 @@
 .cartItem {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 40px;
     }
 
-.productInfo {
+.cartItem--image {
+    /* align-self: center;    vertical centering */
+    /* justify-self: center; */
+    width: 50px;
+} 
+
+.product--info {
+    text-align: left;     
+}
+
+.product--info h3 {
     text-align: left;
-    
+    margin: 0;
 }
 
-.twoButtons {
+.product--info p{
+    margin: 0;
+}
+
+/* .twoButtons {
     margin-left : auto;
-}
-
-
+} */
 
 .btn-add {
   background-color: black;

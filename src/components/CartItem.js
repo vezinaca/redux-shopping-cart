@@ -38,16 +38,16 @@ const CartItem = ({product}) => {
     return (
         <>
             <div className="cartItem">
-                <img src={product.photo} width="45px" alt="problem" />
-                <div className="productInfo">
-                    <h5>{product.name}</h5>
+                <img className="cartItem--image" src={product.photo} alt="problem" />
+                <div className="product--info">
+                    <h3>{product.name}</h3>
                     <p>Price: ${product.price}</p>
                 </div>
                 <div className="quantity">
                     <p>Qty: {product.quantity}</p>
                 </div>
                 <div className="twoButtons">
-                    <button onClick={add} className="btn-add"><PlusCircleIcon width={"20px"}/></button>
+                    <button onClick={add} className="btn-add"><PlusCircleIcon width={"20px"} /></button>
                     <button onClick={remove}className="btn-remove">{ isMoreThanOne ? <MinusCircleIcon width={"20px"} /> : <TrashIcon width={"20px"} />} </button>
                 </div>
             </div>

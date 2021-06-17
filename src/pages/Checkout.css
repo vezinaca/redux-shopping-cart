@@ -2,7 +2,7 @@
 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 2px solid darkgrey;
+    border: 2px solid lightgray;
     /* background-color: rgb(247, 243, 243); */
     padding: 50px;
     border-radius: 10px;
@@ -11,8 +11,7 @@
 
 .title {
     text-align: left;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+
 }
 
 label {
@@ -20,12 +19,15 @@ label {
     /* display: flex; */
     text-align: left;
     /* margin-top: 10px; */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    margin-top: 20px;
    
   }
 
 .radio {
     display: flex;
+    margin: 0;
+    margin-bottom: 10px;
     
 }
 
@@ -38,7 +40,8 @@ label {
 }
 
 .radio label {
-    margin-left: 15px;
+    margin-left: 25px;
+    margin-top: 0px;
 }
 
 form {
@@ -51,6 +54,7 @@ form {
     border: none;
     background-color: black;
     color: white;
+    padding: 5px;
 }
 
 .info-box {
@@ -63,6 +67,11 @@ form {
     background-color: darkgrey;
 }
 
+.label-input {
+    text-align: left;
+    display: inline-block;
+}
+
 input[type="email"],
 input[type="text"],
 input[type="number"] {
@@ -70,7 +79,7 @@ input[type="number"] {
   font-size: 1rem;
   background-color: white;
   border: 1px solid darkgrey;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .credit-info {
@@ -84,15 +93,10 @@ input[type="number"] {
 }
 
 .error {
-    font-size: 0.85rem;
-    text-align: left;
-    margin-top: 15rem;
-    
-}
-
-.error  {
-    color: red;
     font-size: 0.75rem;
+    text-align: left;
+    color: red;    
+    margin: 0;
 }
 
 .credit-info-error {
@@ -104,4 +108,9 @@ input[type="number"] {
 
 .ccv{
     margin-left: 12px;
+}
+
+.ssl-message {
+    font-size: 0.75rem;
+    text-align: left;
 }
