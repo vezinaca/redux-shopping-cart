@@ -46,7 +46,7 @@ const Checkout = () => {
     return (
         <>
             <h4>This is the checkout page</h4>
-            <div className="checkout-page-container">
+            
             <Formik
                 initialValues={{
                     firstName: '',
@@ -65,143 +65,85 @@ const Checkout = () => {
             >
                 { ( { values, errors, touched }) => (
                     <>
-                    <div className="summary info-box">
-                        <h5 className="title">Information</h5>
-                            <Form>
-                            <label>First Name
-                                <div>
-                                <Field name="firstName" />
-                                </div>
-                            </label>
-                                {errors.firstName && touched.firstName ? (
-                                    <p className="error">{errors.firstName}</p>
-                                ) : null}
-                            <label>Last Name
-                                <Field name="lastName" />
-                            </label>
-                                {errors.lastName && touched.lastName ? (
-                                    <p className="error">{errors.lastName}</p>
-                                ) : null}
-                            <label>Email Address
-                                <Field name="email" type="email" />
-                            </label>
-                                {errors.email && touched.email ? <p className="error">{errors.email}</p> : null}
-                                <button type="submit">Submit</button>
+                    <Form>
+                        <div className="checkout-page-container">
+                            <div className="summary info-box">
+                                <h5 className="title">Information</h5>                                    
+                                    <label>First Name
+                                        <div>
+                                        <Field className="field" name="firstName"  placeholder="John"/>
+                                        </div>
+                                    </label>
+                                        {errors.firstName && touched.firstName ? (
+                                            <p className="error">{errors.firstName}</p>
+                                        ) : null}
+                                    <label>Last Name
+                                        <div>
+                                        <Field className="field" name="lastName" placeholder="Doe"/>
+                                        </div>
+                                    </label>
+                                        {errors.lastName && touched.lastName ? (
+                                            <p className="error">{errors.lastName}</p>
+                                        ) : null}
+                                    <label>Email Address
+                                        <div>
+                                        <Field className="field" name="email" type="email" placeholder="email@email.com"/>
+                                        </div>
+                                    </label>
+                                        {errors.email && touched.email ? <p className="error">{errors.email}</p> : null}
+                                                                       
+                            </div>
 
-                            </Form>
-                    </div>
+                            <div className="payment-method info-box">
+                                    <h5 className="title">Payment Method</h5>
+                                    <div id="my-radio-group"></div>
+                                        <div role="group" aria-labelledby="my-radio-group">
+                                            <label className="label--radio">
+
+                                            <Field className="radio" type="radio" name="paymentType" value="Paypal" />
+                                            <span className="text--label">Paypal</span>
+                                            </label>
+                                            <div>
+                                            <label className="label--radio">
+                                            <Field className="radio" type="radio" name="paymentType" value="Credit" />
+                                            <span className="text--label">Credit card</span>
+                                            </label>
+                                            </div>                                            
+                                        </div>
+
+                                    <label>Card number
+                                        <div>
+                                        <Field className="field" name="cardNumber" placeholder="1234 1234 1234 1234" />
+                                        </div>
+                                    </label>
+                                    {errors.cardNumber && touched.cardNumber ? <p className="error">{errors.cardNumber}</p> : null}
+                                    <label>Expiry date
+                                        <div>
+                                        <Field name="expiryDate" placeholder="09/25"/>
+                                        </div>
+                                    </label>
+                                    {errors.expiryDate && touched.expiryDate ? <p className="error">{errors.expiryDate}</p> : null}
+                                    <label>cvc/ccv
+                                        <div>
+                                        <Field name="ccv" placeholder="123"/>
+                                        </div>
+                                    </label>
+                                    {errors.ccv && touched.ccv ? <p className="error">{errors.ccv}</p> : null}
+                                    <button className="btn-submit" type="submit">Submit</button>
+                                    <p className="ssl-message">Your transaction is secured with ssl encryption</p>
+                                
+                            </div>
+
+                           
+                                        </div>
+                        
+                    </Form>
+                    
                     </>
                 )}
 
             </Formik>
-                
-                <div className="summary info-box">
-                    <h5 className="title">Information</h5>
-                        <form onSubmit={bidon}>
-                            
-                                <label htmlFor="firstName">First Name</label>
-                                <input
-                                    id="firstName"
-                                    name="firstName"
-                                    type="text"
-                                    onChange={bidon}
-                                    onBlur={bidon}
-                                    value={bidon}
-                                />
-                                <p className='error'>First name error</p>
-                            
-                            <label htmlFor="lastName">Last Name</label>
-                            <input
-                                id="lastName"
-                                name="lastName"
-                                type="text"
-                                onChange={bidon}
-                                onBlur={bidon}
-                                value={bidon}
-                            />
-                            <p className='error'>last name error</p>
-                            
-                            <label htmlFor="email">Email Address</label>
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                onChange={bidon}
-                                onBlur={bidon}
-                                value={bidon}
-                            />
-                            <p className='error'>email error</p>
-                            
-                        </form>
-                </div>
-                <div className="payment-method info-box">
-                    <h5 className="title">Payment Method</h5>
-                        <form className="form" onSubmit={bidon}>
-                            <div className='paymentType'>
-                                <div className='radio'>
-                                    <input type='radio' className="paypal" name="paymentType" value="paypal"></input>
-                                    <label for="paypal">Paypal</label>
-                                </div>
-                                <div className='radio'>
-                                    <input type='radio' className="credit" name="paymentType" value="credit"></input>
-                                    <label for="paypal">Credit card</label>
-                                </div> 
-                            </div>                       
-                            <label htmlFor="cardNumber">Card number</label>
-                            <input
-                                id="cardNumber"
-                                name="cardNumber"
-                                type="cardNumber"
-                                placeholder='1234 5678 1234 5678'
-                                onChange={bidon}
-                                onBlur={bidon}
-                                value={bidon}                            
-                            />
-                            <p className='error'>card  number error</p>
-                            
-                            <div className='credit-info'>
-                                <div className='label-input'>
-                                    <label htmlFor="expiryDate">Expiry date</label>
-                                    <input
-                                        id="expiryDate"
-                                        name="expiryDate"
-                                        type="expiryDate"
-                                        onChange={bidon}
-                                        onBlur={bidon}
-                                        value={bidon}
-                                        placeholder='01/01'
-                                    />
-                                </div>
-                                
-                                <div className='label-input'>
-                                    <label htmlFor="ccv">cvc/ccv</label>
-                                    <input
-                                        id="ccv"
-                                        name="ccv"
-                                        type="ccv"
-                                        onChange={bidon}
-                                        value={bidon}
-                                        placeholder='123'
-                                    />
-                                </div>                     
-                                
-                            </div>
-                            <div className='credit-info-error'>
-                                <div>
-                                <p className='error'>error</p>
-                                </div>
-                                <div>
-                                <p className='error ccv'>error</p>
-                                </div>
-                                
-                            </div>
-                            <button className="btn-submit" type="submit">Submit</button>                       
-                            <p className="ssl-message">Your transaction is secured with ssl encryption</p>
-                            
-                        </form>
-                </div>               
-               
-            </div>            
+            
             </>
     )
 }
