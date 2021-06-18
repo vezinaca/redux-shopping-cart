@@ -67,10 +67,12 @@ form {
     background-color: darkgrey;
 }
 
-.label-input {
+/* .label-input {
     text-align: left;
     display: inline-block;
-}
+} */
+
+
 
 input[type="email"],
 input[type="text"],
