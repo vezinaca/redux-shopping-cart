@@ -1,69 +1,91 @@
 export const dummyProducts = [
     {
       id: 1,
-      name: "Buffalo - Striploin",
-      price: 39.11,
+      name: "Inhale - Exhale - Grey",
+      price: 29.95,
       photo: "/img/1.jpg",
+      material: "100% cotton",
+      brand: "Gildan",
     },
     {
       id: 2,
-      name: "Bacardi Breezer - Tropical",
-      price: 257.92,
-      photo: "/img/2.jpg"
+      name: "Pizza Pocket - Black",
+      price: 15.95,
+      photo: "/img/2.jpg",
+      material: "90% cotton, 10% polyester",
+      brand: "Gildan",
     },
     {
       id: 3,
-      name: "Wine - Gato Negro Cabernet",
-      price: 51.01,
-      photo: "/img/3.jpg"
+      name: "I am the storm - Navy blue",
+      price: 19.99,
+      photo: "/img/3.jpg",
+      material: "100% cotton",
+      brand: "Gildan",
     },
     {
       id: 4,
-      name: "Cabbage - Nappa",
-      price: 250.90,
-      photo: "/img/4.jpg"
+      name: "Regal - Beagle",
+      price: 25.90,
+      photo: "/img/4.jpg",
+      material: "90% cotton, 10% polyester",
+      brand: "Gildan",
     },
     {
       id: 5,
-      name: "Sping Loaded Cup Dispenser",
-      price: 175.85,
-      photo: "/img/5.jpg"
+      name: "4th of July Cat - Americat",
+      price: 9.85,
+      photo: "/img/5.jpg",
+      material: "90% cotton, 10% polyester",
+      brand: "Gildan",
     },
     {
       id: 6,
-      name: "Bread - Malt",
-      price: 82.61,
-      photo: "/img/6.jpg"
+      name: "Double AA - Meeting",
+      price: 24.95,
+      photo: "/img/6.jpg",
+      material: "100% cotton",
+      brand: "Gildan",
     },
     {
       id: 7,
-      name: "Glass Clear 8 Oz",
-      price: 201.10,
-      photo: "/img/7.jpg"
+      name: "Ice cream yoga pants",
+      price: 79.95,
+      photo: "/img/7.jpg",
+      material: "100% lycra",
+      brand: "Gildan",
     },
     {
       id: 8,
-      name: "Sour Puss Raspberry",
+      name: "Galaxy yoga pants",
       price: 134.99,
-      photo: "/img/8.jpg"
+      photo: "/img/8.jpg",
+      material: "100% Spandex",
+      brand: "Gildan",
     },
     {
       id: 9,
-      name: "Pork - Chop, Frenched",
-      price: 199.16,
-      photo: "/img/9.jpg"
+      name: "Disco Inferno - Yoga pants",
+      price: 99.99,
+      photo: "/img/9.jpg",
+      material: "100% Spandex",
+      brand: "Gildan",
     },
     {
       id: 10,
-      name: "Bagels Poppyseed",
-      price: "123.82",
-      photo: "/img/10.jpg"
+      name: "Triangle Yoga pants",
+      price: "79.99",
+      photo: "/img/10.jpg",
+      material: "100% Spandex",
+      brand: "Gildan",
     },
     {
         id: 11,
-        name: "Bag",
-        price: "1.23",
-        photo: "/img/10.jpg"
+        name: "Triangle Yoga pants - Black",
+        price: "89.95",
+        photo: "/img/10.jpg",
+        material: "100% lycra",
+        brand: "Gildan",
       },
   ];
   

@@ -6,9 +6,8 @@ import { useDispatch } from "react-redux";
 
 import { 
          addMoreToCart,
-        selectCart,
-        removeFromCart,
-        decreaseFromCart
+         removeFromCart,
+         decreaseFromCart
          } from "../features/cart/cartSlice";
 
 const CartItem = ({product}) => {

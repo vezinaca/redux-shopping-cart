@@ -37,12 +37,17 @@
     margin: 5px;
     transition: 0.2s;
     width: 30%;
+    cursor: pointer;
 }
 
 .btn-my-add:hover {
     background-color: lightgrey;
     color: black;
 }
+
+/* .btn-my-add:active, .btn-my-add:focus {
+    border: 1px red solid;
+} */
 
 .btn-add-more {
     background-color: white;
@@ -55,12 +60,17 @@
     transition: 0.2s;
     /* width: 74px; */
     width: 30%;
+    cursor: pointer;
 }
 
 .btn-add-more:hover {
     background-color: black;
     color: white;  
 }
+
+/* .btn-add-more:active, .btn-add-more:focus {
+    border: 1px red solid;
+} */
 
 .btn-myDetails
 {

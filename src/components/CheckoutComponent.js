@@ -1,13 +1,25 @@
 import React from "react";
 import "./CheckoutComponent.css";
-import { useSelector } from "react-redux";
-import { selectCartInfo } from "../features/cart/cartSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCartInfo, selectCart } from "../features/cart/cartSlice";
 import { Link } from "react-router-dom";
-import Checkout from "../pages/Checkout";
+
+import { clearCart } from "../features/cart/cartSlice";
 
 const CheckoutComponent = () => {
 
     const cartInfo = useSelector(selectCartInfo);
+    const cart = useSelector(selectCart);
+    const dispatch = useDispatch()
+
+    const handleClear = () => {
+        const testCart = 0;
+        dispatch(clearCart(testCart));
+        //dispatch(testCarl);
+        //cart = [];
+        console.log('clear');  
+        console.log(cart);     
+    }
 
     return (
         <>
@@ -18,7 +30,7 @@ const CheckoutComponent = () => {
                     <h5>${cartInfo.total}</h5>
                     <div className="buttonsDiv">
                         <Link to="./checkout"><button className="btn-checkout">checkout</button></Link>
-                        <button className="btn-clear">Clear</button>
+                        <button className="btn-clear" onClick={handleClear}>Clear</button>
                     </div>
                 </div>
             

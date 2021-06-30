@@ -13,10 +13,7 @@ export const sumItems = (state) => {
     
     state.cartInfo.itemCount = state.cartItems.reduce((total, product) => total + product.quantity, 0);
     state.cartInfo.total = state.cartItems.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
-    
 }
-
-
 
 export const cartSlice = createSlice({
     name: 'cart', 
@@ -32,7 +29,7 @@ export const cartSlice = createSlice({
             
         },
         addMoreToCart: (state, action) => {
-            console.log('addmore to cart slice');
+            //console.log('addmore to cart slice');
             state.cartItems[state.cartItems.findIndex(item => item.id === action.payload.id)].quantity++
             state.cartInfo.itemCount = state.cartItems.reduce((total, product) => total + product.quantity, 0);
             state.cartInfo.total = state.cartItems.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
@@ -54,15 +51,15 @@ export const cartSlice = createSlice({
             state.cartInfo.itemCount = state.cartItems.reduce((total, product) => total + product.quantity, 0);
             state.cartInfo.total = state.cartItems.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
         },
-        sumTest: (state) => {
-            let test = 2342;
-            console.log("test: ", test);
-        }
-
+        clearCart: (state) => {            
+            state.cartItems.length = 0;
+            state.cartInfo.itemCount = 0;
+            state.cartInfo.total = 0;             
+        },
     }
 });
 
-export const { addToCart, removeFromCart, addMoreToCart, decreaseFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, addMoreToCart, decreaseFromCart, clearCart } = cartSlice.actions;
 
 //export const selectCart = (state) => state.cart.cartItems;
 export const selectCart = state => state.cart.cartItems;

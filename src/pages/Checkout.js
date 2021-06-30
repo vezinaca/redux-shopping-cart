@@ -9,10 +9,6 @@ const Checkout = () => {
 
     const cartInfo = useSelector(selectCartInfo);
 
-    const bidon = () => {
-        console.log('bidon');
-    }
-
     const creditInfoSchema = Yup.object({
         firstName: Yup.string()
         .max(15, 'Must be 15 characters or less')
@@ -39,7 +35,7 @@ const Checkout = () => {
         .matches (/([0-9]{3})/, '3 numbers required')
         .required('3 numbers required'),
 
-        paymentType: Yup.string().required("A radio option is required"),
+        paymentType: Yup.string().required("A payment option is required"),
 
       });
 
@@ -61,6 +57,7 @@ const Checkout = () => {
                 onSubmit={values => {
                     // same shape as initial values
                     console.log(values);
+                    alert(JSON.stringify(values, null, 2));
                 }}
             >
                 { ( { values, errors, touched }) => (
@@ -99,17 +96,17 @@ const Checkout = () => {
                                     <div id="my-radio-group"></div>
                                         <div role="group" aria-labelledby="my-radio-group">
                                             <label className="label--radio">
-
-                                            <Field className="radio" type="radio" name="paymentType" value="Paypal" />
-                                            <span className="text--label">Paypal</span>
+                                                <Field className="radio" type="radio" name="paymentType" value="Paypal" />
+                                                <span className="text--label">Paypal</span>
                                             </label>
                                             <div>
-                                            <label className="label--radio">
-                                            <Field className="radio" type="radio" name="paymentType" value="Credit" />
-                                            <span className="text--label">Credit card</span>
-                                            </label>
+                                                <label className="label--radio">
+                                                <Field className="radio" type="radio" name="paymentType" value="Credit" />
+                                                <span className="text--label">Credit card</span>
+                                                </label>
                                             </div>                                            
                                         </div>
+                                        {errors.paymentType && touched.paymentType ? <p className="error">{errors.paymentType}</p> : null}
 
                                     <label>Card number
                                         <div>
