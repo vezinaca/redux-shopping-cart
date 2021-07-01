@@ -22,7 +22,8 @@ const Cart = () => {
             <h5>This is the cart page.</h5>
             <div className='container'>                
                 <div className="cartContent">
-                    {allItemsCart}
+                    { cart.length === 0 ? <h4>Your cart is empty</h4> : allItemsCart}
+                    {/* {allItemsCart} */}
                 </div>
                 <div className="checkout">
                     <CheckoutComponent />

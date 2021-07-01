@@ -26,7 +26,7 @@ const Checkout = () => {
         //   .max(4, 'Must be 4 characters or less')
         //   .required('Required'),
         .typeError('Not a valid expiration date. Example: MM/YY')
-        .max(5, 'Carl MM/YY')
+        .max(5, 'MM/YY')
         .matches( /([0-9]{2})\/([0-9]{2})/,
         'MM/YY')
         .required('MM/YY required'),
@@ -73,7 +73,7 @@ const Checkout = () => {
                                     </label>
                                         {errors.firstName && touched.firstName ? (
                                             <p className="error">{errors.firstName}</p>
-                                        ) : null}
+                                        ) : <p></p>}
                                     <label>Last Name
                                         <div>
                                         <Field className="field" name="lastName" placeholder="Doe"/>
@@ -81,20 +81,20 @@ const Checkout = () => {
                                     </label>
                                         {errors.lastName && touched.lastName ? (
                                             <p className="error">{errors.lastName}</p>
-                                        ) : null}
+                                        ) : <p></p>}
                                     <label>Email Address
                                         <div>
                                         <Field className="field" name="email" type="email" placeholder="email@email.com"/>
                                         </div>
                                     </label>
-                                        {errors.email && touched.email ? <p className="error">{errors.email}</p> : null}
+                                        {errors.email && touched.email ? <p className="error">{errors.email}</p> : <p></p>}
                                                                        
                             </div>
 
                             <div className="payment-method info-box">
                                     <h5 className="title">Payment Method</h5>
-                                    <div id="my-radio-group"></div>
-                                        <div role="group" aria-labelledby="my-radio-group">
+                                    <div className="my-radio-group">
+                                        {/* <div role="group" aria-labelledby="my-radio-group"> */}
                                             <label className="label--radio">
                                                 <Field className="radio" type="radio" name="paymentType" value="Paypal" />
                                                 <span className="text--label">Paypal</span>
@@ -104,28 +104,29 @@ const Checkout = () => {
                                                 <Field className="radio" type="radio" name="paymentType" value="Credit" />
                                                 <span className="text--label">Credit card</span>
                                                 </label>
-                                            </div>                                            
-                                        </div>
-                                        {errors.paymentType && touched.paymentType ? <p className="error">{errors.paymentType}</p> : null}
+                                            </div>    
+                                            </div>                                        
+                                        {/* </div> */}
+                                        {errors.paymentType && touched.paymentType ? <p className="error">{errors.paymentType}</p> : <p></p>}
 
                                     <label>Card number
                                         <div>
                                         <Field className="field" name="cardNumber" placeholder="1234 1234 1234 1234" />
                                         </div>
                                     </label>
-                                    {errors.cardNumber && touched.cardNumber ? <p className="error">{errors.cardNumber}</p> : null}
+                                    {errors.cardNumber && touched.cardNumber ? <p className="error">{errors.cardNumber}</p> : <p></p>}
                                     <label>Expiry date
                                         <div>
                                         <Field name="expiryDate" placeholder="09/25"/>
                                         </div>
                                     </label>
-                                    {errors.expiryDate && touched.expiryDate ? <p className="error">{errors.expiryDate}</p> : null}
+                                    {errors.expiryDate && touched.expiryDate ? <p className="error">{errors.expiryDate}</p> : <p></p>}
                                     <label>cvc/ccv
                                         <div>
                                         <Field name="ccv" placeholder="123"/>
                                         </div>
                                     </label>
-                                    {errors.ccv && touched.ccv ? <p className="error">{errors.ccv}</p> : null}
+                                    {errors.ccv && touched.ccv ? <p className="error">{errors.ccv}</p> : <p></p>}
                                     <button className="btn-submit" type="submit">Submit</button>
                                     <p className="ssl-message">Your transaction is secured with ssl encryption</p>
                                 
