@@ -4,24 +4,74 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px; 
     
     
 }
 
 .ul {
     display: flex;
-    width: 25%;
+    width: 35%;
     justify-content: space-around;
     align-items: center;
-    list-style-type: none;
+    /* list-style-type: none; */
     
 }
 
 li {
     color: black;
+    list-style-type: none;
 }
 
 .cartLogo {
     margin-right: 8px;
+}
+
+.cart-stuff {
+    display: flex;
+}
+
+.logo {
+    display: flex;   
+    align-items: center; 
+}
+
+
+.logo h1 {
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.hamburger-toggle{
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hamburger-toggle {
+        display: block;
+    }
+    .ul {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        /* height: 92vh; */
+        align-items: center;
+        width: 100%;
+        top: 8vh;
+        background-color: white;
+        font-size: 32px;
+        transform: translateX(100%);
+        /* transition: transform 0.5s ease-in; */
+    }
+
+    .active {
+        transform: translateX(0%);
+    }
 }
