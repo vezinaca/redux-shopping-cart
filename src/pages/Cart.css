@@ -14,3 +14,22 @@
     grid-column: 10 / 12;
     
 }
+
+@media screen and (max-width: 1034px) {
+
+    /* .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: red;
+    } */
+
+    .cartContent {
+        grid-column: 1 / 12;
+    }   
+
+    .checkout {
+        grid-column: 4 / 10;
+        justify-content: center;
+        
+    }
+}

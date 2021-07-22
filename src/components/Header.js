@@ -9,17 +9,17 @@ import { selectCartInfo } from "../features/cart/cartSlice";
  const Header = () => {
 
     const cartInfo = useSelector(selectCartInfo);
-    // const 
+    const [isActive, setIsActive] = useState(false);
 
 
     const handleActive = () => {
         console.log('active');
+        setIsActive(!isActive);
     }
 
     return (
         <div className="header">
-            <nav className="nav">
-                
+            <nav className="nav">                
                 <Link to="/store">                        
                     <li>
                         <div className="logo">
@@ -28,7 +28,8 @@ import { selectCartInfo } from "../features/cart/cartSlice";
                         </div>
                     </li>                        
                 </Link>
-                <ul className="ul">                    
+                {/* <ul className={isActive ? "ul active" : "ul"}>                     */}
+                <ul className="ul">
                     <Link to="/store"><li>Store</li></Link>
                     <Link to="/about"><li>About</li></Link>
                     <Link to="/cart">
@@ -44,9 +45,9 @@ import { selectCartInfo } from "../features/cart/cartSlice";
                         </div>
                     </Link>
                 </ul>
-                <div className="hamburger-toggle" onClick={handleActive}>
+                {/* <div className="hamburger-toggle" onClick={handleActive}>
                     <i className="fas fa-bars fa-lg"></i>
-                </div>
+                </div> */}
             </nav>   
         </div>
     )

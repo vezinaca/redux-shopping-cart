@@ -12,16 +12,18 @@ import Details from "./pages/Details";
 function App() {
   return (
       <Router>
-          <Header />
-          <div className="App">          
-          <Switch>
-              <Route exact path="/store" component={Store}></Route>
-              <Route path="/store/:id" component={Details}></Route>
-              <Route path="/about" component={About}></Route>
-              <Route path="/cart" component={Cart}></Route>
-              <Route path="/checkout" component={Checkout}></Route>
-          </Switch>
-          <Footer />
+          <div className="everything">
+            <Header />
+            <div className="App">          
+            <Switch>
+                <Route exact path="/store" component={Store}></Route>
+                <Route path="/store/:id" component={Details}></Route>
+                <Route path="/about" component={About}></Route>
+                <Route path="/cart" component={Cart}></Route>
+                <Route path="/checkout" component={Checkout}></Route>
+            </Switch>
+            <Footer />
+            </div>
           </div>
         
     </Router>

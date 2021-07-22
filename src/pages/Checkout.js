@@ -62,7 +62,9 @@ const Checkout = () => {
             >
                 { ( { values, errors, touched }) => (
                     <>
-                    <Form>
+                    <p className="total"> Items: {cartInfo.itemCount}</p>
+                    <p className="total">Total: $ {cartInfo.total}</p>
+                    <Form className="formik">
                         <div className="checkout-page-container">
                             <div className="summary info-box">
                                 <h5 className="title">Information</h5>                                    

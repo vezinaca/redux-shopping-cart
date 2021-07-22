@@ -12,5 +12,12 @@
         color: rgb(138, 135, 135);
     }
 
+    @media (max-width: 500px){
+        .everything {
+            grid-template-columns: 1fr;
+
+        }
+    }
+
     
         
