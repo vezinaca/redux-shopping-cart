@@ -35,7 +35,8 @@ const Details = ({ match }) => {
         <>
         <h3>Details page</h3>
         <div className="details">
-            <img src={produit.photo} alt="problem" width="350px"/>
+            {/* <img src={produit.photo} alt="problem" width="350px"/> */}
+            <img src={produit.photo} alt="problem" className="responsive"/>
             <div className="product-infos">
                 <h3>Product Info</h3>
                 <p>Name: {produit.name} </p>
