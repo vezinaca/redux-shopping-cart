@@ -1,7 +1,7 @@
 import React from "react";
 import "./StoreItem.css";
 import { Link } from "react-router-dom";
-import { formatNumber } from "../utilities/utils";
+import { formatNumber, images } from "../utilities/utils";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -10,17 +10,6 @@ import { addToCart,
         selectCart,
          } from "../features/cart/cartSlice";
 
-
-function importAll(r) {
-let out = {};
-r.keys().forEach(k => {
-    out[k] = r(k).default;
-});
-return out;
-}
-
-//const images = importAll(require.context('./images/commandes/', false, /\.(png|jpe?g|svg)$/));
-const images = importAll(require.context('../img/', false, /\.(png|jpe?g|svg)$/));
 
 const StoreItem = ({ product }) => {
     
@@ -45,15 +34,17 @@ const StoreItem = ({ product }) => {
 
     console.log("image sans bar: ", product.photo);
     console.log("image: ", './' + product.photo);
+    console.log("[images[product.photo]: ", images[product.photo]);
+    console.log("tableau image: ", images);
       
     return (
         <>         
             <div className="card">
                 <div className="card--body">
-                    <p>carl</p>
-                    <img className="card--img" src={product.photo} alt="problem" />
-                    {/* <img className="card--image" src={images['./' + livre.image_name]} alt="problem" /> */}
-                    <img className="card--image" src={images[product.photo]} alt="problem" />
+                    
+                    {/* <img className="card--img" src={product.photo} alt="problem" /> */}
+                    {/* <img className="card--img" src={images['./' + livre.image_name]} alt="problem" /> */}
+                    <img className="card--img" src={images['./' + product.photo]} alt="problem" />
                     <div className="card--info">
                      
                         <p >{product.name}</p>

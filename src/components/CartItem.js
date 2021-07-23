@@ -1,6 +1,7 @@
 import React from "react";
 import "./CartItem.css";
 import { PlusCircleIcon, MinusCircleIcon, TrashIcon } from './Icons';
+import { images } from "../utilities/utils";
 
 import { useDispatch } from "react-redux";
 
@@ -37,7 +38,8 @@ const CartItem = ({product}) => {
     return (
         <>
             <div className="cartItem">
-                <img className="cartItem--image" src={product.photo} alt="problem" />
+                <img className="cartItem--image" src={images['./' + product.photo]} alt="problem" />
+                {/* <img className="cartItem--image" src={product.photo} alt="problem" /> */}
                 <div className="product--info">
                     <h3>{product.name}</h3>
                     <p>Price: ${product.price}</p>
