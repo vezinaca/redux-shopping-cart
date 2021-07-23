@@ -53,7 +53,7 @@ const StoreItem = ({ product }) => {
 
                     <img className="card--img" src={product.photo} alt="problem" />
                     {/* <img className="card--image" src={images['./' + livre.image_name]} alt="problem" /> */}
-                    <img className="card--image" src={images['./' + product.photo]} alt="problem" />
+                    <img className="card--image" src={images[product.photo]} alt="problem" />
                     <div className="card--info">
                      
                         <p >{product.name}</p>
