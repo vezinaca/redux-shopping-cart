@@ -10,6 +10,18 @@ import { addToCart,
         selectCart,
          } from "../features/cart/cartSlice";
 
+
+function importAll(r) {
+let out = {};
+r.keys().forEach(k => {
+    out[k] = r(k).default;
+});
+return out;
+}
+
+//const images = importAll(require.context('./images/commandes/', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../img/', false, /\.(png|jpe?g|svg)$/));
+
 const StoreItem = ({ product }) => {
     
     const cart = useSelector(selectCart);
@@ -30,13 +42,20 @@ const StoreItem = ({ product }) => {
     const handleDetails = () => {
         console.log('click details');
     }
+
+    console.log("image sans bar: ", product.photo);
+    console.log("image: ", './' + product.photo);
       
     return (
-        <>           
+        <>         
             <div className="card">
                 <div className="card--body">
+
                     <img className="card--img" src={product.photo} alt="problem" />
+                    {/* <img className="card--image" src={images['./' + livre.image_name]} alt="problem" /> */}
+                    <img className="card--image" src={images['./' + product.photo]} alt="problem" />
                     <div className="card--info">
+                     
                         <p >{product.name}</p>
                         <h2>{formatNumber(product.price)}</h2>
                     </div>

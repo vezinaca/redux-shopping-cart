@@ -2,7 +2,7 @@ export const dummyProducts = [
     {
       id: 1,
       name: "Inhale - Exhale - Grey",
-      price: 29.95,
+      price: 31.95,
       photo: "/img/1.jpg",
       material: "100% cotton",
       brand: "Gildan",
