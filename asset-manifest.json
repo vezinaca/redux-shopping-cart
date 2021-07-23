@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/redux-shopping-cart/static/css/main.2aee748e.chunk.css",
+    "main.js": "/redux-shopping-cart/static/js/main.ef295474.chunk.js",
+    "main.js.map": "/redux-shopping-cart/static/js/main.ef295474.chunk.js.map",
+    "runtime-main.js": "/redux-shopping-cart/static/js/runtime-main.81159286.js",
+    "runtime-main.js.map": "/redux-shopping-cart/static/js/runtime-main.81159286.js.map",
+    "static/js/2.b5d0ee98.chunk.js": "/redux-shopping-cart/static/js/2.b5d0ee98.chunk.js",
+    "static/js/2.b5d0ee98.chunk.js.map": "/redux-shopping-cart/static/js/2.b5d0ee98.chunk.js.map",
+    "index.html": "/redux-shopping-cart/index.html",
+    "static/css/main.2aee748e.chunk.css.map": "/redux-shopping-cart/static/css/main.2aee748e.chunk.css.map",
+    "static/js/2.b5d0ee98.chunk.js.LICENSE.txt": "/redux-shopping-cart/static/js/2.b5d0ee98.chunk.js.LICENSE.txt",
+    "static/media/clothes-logo.37b1887f.jpg": "/redux-shopping-cart/static/media/clothes-logo.37b1887f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81159286.js",
+    "static/js/2.b5d0ee98.chunk.js",
+    "static/css/main.2aee748e.chunk.css",
+    "static/js/main.ef295474.chunk.js"
+  ]
+}
