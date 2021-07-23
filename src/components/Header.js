@@ -19,11 +19,12 @@ import { selectCartInfo } from "../features/cart/cartSlice";
 
     return (
         <div className="header">
-            <nav className="nav">                
+            <nav className="nav">  
+                <p>carl</p>              
                 <Link to="/store">                        
                     <li>
                         <div className="logo">
-                            <i class="fas fa-tshirt fa-lg"></i>
+                            <i className="fas fa-tshirt fa-lg"></i>
                             <h1>Clothes</h1>
                         </div>
                     </li>                        

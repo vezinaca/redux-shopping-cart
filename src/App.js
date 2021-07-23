@@ -13,7 +13,7 @@ import Details from "./pages/Details";
 function App() {
   return (
       <Router>
-          <div className="everything">
+          <div className="everything">              
             <Header />
             <div className="App">          
             <Switch>                

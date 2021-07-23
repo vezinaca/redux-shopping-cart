@@ -28,15 +28,11 @@ const StoreItem = ({ product }) => {
         } 
     }
 
-    const handleDetails = () => {
-        console.log('click details');
-    }
+    // const handleDetails = () => {
+    //     console.log('click details');
+    // }
 
-    console.log("image sans bar: ", product.photo);
-    console.log("image: ", './' + product.photo);
-    console.log("[images[product.photo]: ", images[product.photo]);
-    console.log("tableau image: ", images);
-      
+    
     return (
         <>         
             <div className="card">
@@ -51,7 +47,8 @@ const StoreItem = ({ product }) => {
                         <h2>{formatNumber(product.price)}</h2>
                     </div>
                     <div className="les-boutons">
-                        <button className="btn-myDetails" onClick={handleDetails}><Link to={`/store/${product.id}`}> DETAILS</Link></button>
+                        {/* <button className="btn-myDetails" onClick={handleDetails}><Link to={`/store/${product.id}`}> DETAILS</Link></button> */}
+                        <button className="btn-myDetails"><Link to={`/store/${product.id}`}> DETAILS</Link></button>
                         <button className={!isInCart ? 'btn-my-add' : 'btn-add-more'} onClick={handleAdd}>{!isInCart ? 'ADD TO CART' : 'ADD MORE' }</button>
                     </div>
                     

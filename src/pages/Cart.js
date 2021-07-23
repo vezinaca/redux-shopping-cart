@@ -6,12 +6,10 @@ import "./Cart.css";
 
 import { selectCart } from "../features/cart/cartSlice";
 
-
-
 const Cart = () => {
 
     const cart = useSelector(selectCart);
-      
+          
     const allItemsCart = cart?.map(product => (
         <CartItem key={product.id} product={product} />
     ))
