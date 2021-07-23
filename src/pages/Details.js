@@ -33,6 +33,7 @@ const Details = ({ match }) => {
     
     return(
         <>
+        
         <h3>Details page</h3>
         <div className="details">
             {/* <img src={produit.photo} alt="problem" width="350px"/> */}

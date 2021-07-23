@@ -63,3 +63,30 @@
     max-width: 350px;
     height: auto;
   }
+
+@media (max-width: 850px) {
+    .responsive  {
+        width: 50%;
+        justify-self: center;
+        
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+        margin: 10px auto 30px;
+        border: 2px solid rgb(189, 186, 186);
+        /* margin-bottom: 30px;
+        margin-top: 30px; */
+        width: 400px;
+        padding: 30px;
+        grid-gap: 10px;
+        justify-self: center;
+    }
+
+    .product-infos {
+        text-align: center;
+        /* align-content: center; */
+        margin-top: 5px;
+    }
+    
+}

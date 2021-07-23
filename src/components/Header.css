@@ -71,6 +71,14 @@ li {
     .nav {
         flex-direction: column;
         justify-self: center;
+        
+    }
+
+    .ul {
+        padding: 15px;
+        border: 2px solid black;
+        border-radius: 5px;
+        justify-self: center;
     }
 
     /* .hamburger-toggle {

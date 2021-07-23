@@ -25,6 +25,8 @@
 
     .cartContent {
         grid-column: 1 / 12;
+        margin: 0 auto;
+        
     }   
 
     .checkout {
